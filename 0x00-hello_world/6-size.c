@@ -14,12 +14,6 @@ printf("Size of a long long int: %lu byte(s)\n", sizeof(long long));
 printf("Size of a float: %lu byte(s)\n", sizeof(float));
 
 #ifdef __x86_64__
-printf("Size of a pointer: %lu byte(s)\n", sizeof(void *));
-printf("Size of a long double: %lu byte(s)\n", sizeof(long double));
-#else
-printf("Size of a pointer: %lu byte(s)\n", sizeof(void *));
-printf("Size of a long double: %lu byte(s)\n", sizeof(long double));
-#endif
 
 return (0);
 }
