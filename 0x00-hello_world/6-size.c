@@ -3,7 +3,6 @@
  * main - A program that prints the size of various types on the computer it is compiled and run on
  * Return: always  0(Success)
  */
-#include <stdio.h>
 
 int main(void) {
     printf("The size of char is %zu bytes\n", sizeof(char));
