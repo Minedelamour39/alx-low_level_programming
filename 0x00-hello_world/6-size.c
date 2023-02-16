@@ -1,15 +1,19 @@
-#include<stdio.h>
-/**
- * main - A program that prints the size of various types on the computer it is compiled and run on
- * Return: always  0(Success)
- */
+#include <stdio.h>
 
-int main(void) {
-    printf("The size of char is %zu bytes\n", sizeof(char));
-    printf("The size of short is %zu bytes\n", sizeof(short));
-    printf("The size of int is %zu bytes\n", sizeof(int));
-    printf("The size of long is %zu bytes\n", sizeof(long));
-    printf("The size of long long is %zu bytes\n", sizeof(long long));
-    printf("The size of float is %zu bytes\n", sizeof(float));
+int main() {
+    printf("Size of a char: %lu byte(s)\n", sizeof(char));
+    printf("Size of an int: %lu byte(s)\n", sizeof(int));
+    printf("Size of a long int: %lu byte(s)\n", sizeof(long));
+    printf("Size of a long long int: %lu byte(s)\n", sizeof(long long));
+    printf("Size of a float: %lu byte(s)\n", sizeof(float));
+
+#ifdef __x86_64__
+    printf("Size of a pointer: %lu byte(s)\n", sizeof(void *));
+    printf("Size of a long double: %lu byte(s)\n", sizeof(long double));
+#else
+    printf("Size of a pointer: %lu byte(s)\n", sizeof(void *));
+#endif
+
     return 0;
 }
+
