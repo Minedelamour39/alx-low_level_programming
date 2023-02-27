@@ -23,7 +23,5 @@ else if (res > 0)
 break;
 i++;
 }
-if (sign == -1 && res == INT_MAX)
-res = INT_MIN;
 return (res *sign);
 }
